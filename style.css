@@ -1,0 +1,366 @@
+                           /* NAVBAR CODE STARTS FROM HERE */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px EEEEEE;
+  position: fixed;
+  width: 100%;
+  background: #4E4FEB;
+  color: #ffffff;
+  opacity: 0.85;
+  z-index: 100;
+}
+#container {
+  content: "";
+  background-image: url(2.jpg);
+  position: absolute;
+
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background-size: cover; /* This property maintains aspect ratio */
+  background-repeat: no-repeat; /* Prevents image from repeating */
+  background-position: center;
+  z-index: -1;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.navbar .navbar-container ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  font-family: "Lato", sans-serif;
+}
+
+.navbar a:hover {
+  color: #15fe00;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 28px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #4E4FEB;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 40px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    overflow: scroll;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
+  }
+}
+
+body::before{
+    content: "";
+    background: linear-gradient(#4E4FEB,#EEEEEE);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: fit-content;
+    z-index: -4;
+    background-position: center;
+}
+#aniwrite {
+    display: flex;
+    font-size: 4rem;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 84vh; /* Make the div fill the viewport height */
+  }
+  #aniwrite h1 a{
+    font-size: 4rem;
+    color: white
+  }
+  
+                               /* COURSE CARD HOME  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --pmcolor: #f1f0f9;
+  --sdcolor: #fefefe;
+  --ttcolor: #2e2e2e;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  width: 90%;
+  margin: 2rem auto;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.card {
+  width: 100%;
+  cursor: default;
+  margin: auto;
+  
+  border-radius: 12px;
+  border: 2px solid black;
+  justify-content: space-between;
+  background-color: var(--sdcolor);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.card-img {
+  width: 100%;
+  height: 15rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.25rem;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-img figcaption {
+  background-color: var(--ttcolor);
+  color: var(--sdcolor);
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.card-title {
+  text-transform: capitalize;
+  margin: 0.75rem 0;
+}
+
+.title {
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.des {
+  padding: 3px;
+  text-align: center;
+
+  padding-top: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+button {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.checked {
+  color: orange;
+}
+
+#foot1{
+  width: 100%;
+  height: fit-content;
+  width :100%;
+  
+  border: 2px solid red;
+}
+.card-body{
+    margin: 18px;
+}
+#courses {
+    width: 100%;
+    
+    background-color:#EEEEEE;
+    color: #000;
+    text-align: center;
+   
+  
+    padding: 12px;
+  }
+  #courses h1 {
+    margin: 10px;
+    padding: 12px;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+  }
+  #coursecontent {
+    margin: auto;
+    height: fit-content;
+    display: flex;
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+  
+    flex-wrap: wrap;
+  }
+
+
+  /* firecracker effect */

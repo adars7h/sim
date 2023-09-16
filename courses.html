@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet"
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container container">
+      <input type="checkbox" name="" id="">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <ul class="menu-items">
+        <li><a href="home.html" style="font-size: 1.3rem">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="contactnew.html">Contact us</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+      <div id="searchcourse">
+        <div id="imagelearn">
+          <img src="learn.jpg" alt="">
+        </div>
+        <div class="container-search">
+         
+        
+        <div id="outersearch">
+
+        <h1>Find More Courses</h1>
+        <form class="nosubmit">
+         
+          <input class="nosubmit" type="search" placeholder="Search Courses">
+        </form>
+        <h2 style="text-align: center; margin: 12px;">Populer courses</h2>
+        <div id="trends">
+          
+          <div class="trend1" id="Free_courses" style="cursor: pointer; transition: all 0.3s;" onclick="handleClick('python')">
+              <img src="v1_3.png" alt="">
+              <p>
+                Python
+              </p>
+          </div>
+          <div class="trend1" id="Data_Structure" style="cursor: pointer; transition: all 0.3s;" onclick="handleClick('data_structure')" >
+              <img src="dsasmall (2).png" alt="">
+              <p>
+                Data Structure
+              </p>
+             
+          </div>
+          <div class="trend1" id="Machine_Learning" style="cursor: pointer; transition: all 0.3s;" onclick="handleClick('machine_learning')" >
+              <img src="ml (2).png" alt="">
+              <p>
+                Machine Learning
+              </p>
+          </div>
+          <div class="trend1" id="React_JS" style="cursor: pointer; transition: all 0.3s;  " onclick="handleClick('React_JS')" >
+              <img src="reactsmall.png" alt="">
+              <p>
+                React JS
+              </p>
+          </div>
+          <!-- <div class="trend1">
+              <img src="" alt="">
+              <p>Full stack devlopment</p>
+          </div>
+          <div class="trend1">
+              <img src="" alt="">
+              <p>Artificial inteligence</p>
+          </div> -->
+      </div>
+      </div> 
+        </div>
+
+      </div>
+      
+
+
+
+      <div class="container"></div>
+<footer>
+  <!-- Footer main -->
+  <section class="ft-main">
+    <div class="ft-main-item">
+      <h2 class="ft-title">About</h2>
+      <ul>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Customers</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Resources</h2>
+      <ul>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">eBooks</a></li>
+        <li><a href="#">Webinars</a></li>
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Contact</h2>
+      <ul>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Sales</a></li>
+        <li><a href="#">Advertise</a></li>
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Stay Updated</h2>
+      <p>Subscribe to our learning Arcade.</p>
+      <form>
+        <input type="email" name="email" placeholder="Enter email address">
+        <input type="submit" value="Subscribe">
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer social -->
+  <section class="ft-social">
+    <ul class="ft-social-list">
+      <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-github"></i></a></li>
+      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+  </section>
+
+  <!-- Footer legal -->
+  <section class="ft-legal">
+    <ul class="ft-legal-list">
+      <li><a href="#">Terms &amp; Conditions</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li>&copy; 2023 Copyright learning Arcade.</li>
+    </ul>
+  </section>
+</footer>
+  <Script>
+    const handleClick = (button) =>{
+     window.location.assign(`./pages/render.html?course=${button}`);
+    // const url = "./pages/render.html";
+    //   const query = new URLSearchParams();
+    //   query.set("course", button);
+    //   const newUrl = new URL(url, window.location.origin).search = query;
+    //   window.location.assign(newUrl);
+    }
+  </Script>
+</body>
+</html>
